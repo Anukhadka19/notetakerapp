@@ -1,4 +1,4 @@
-const tips = require('express').Router();
+const notes = require('express').Router();
 const { router } = require('.');
 const { readFromFile, readAndAppend } = require('../helpers/fsUtils');
 const uuid = require('../helpers/uuid');
