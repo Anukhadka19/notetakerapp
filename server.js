@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const api = require('./routes');
+// const notes = require('./routes/notes.js');
 
 const PORT = process.env.PORT || 3001;
 
@@ -13,14 +14,14 @@ app.use(express.urlencoded({ extended: true }));
 
 
 app.use(express.static('public'));
-app.use('/api', api);
+app.use('./routes/api/notes.js');
 // GET Route for notes
-app.get('/notes', (req, res) =>
+app.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/notes.html'))
 );
 
 // GET Route for html page
-app.get('/feedback', (req, res) =>
+app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 

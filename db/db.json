@@ -1,6 +1,17 @@
 [
     {
-        "title":"Test Title",
-        "text":"Test text"
+        "title": "Anu notes",
+        "text": "Nice to meet you",
+        "note_id": "3975"
+    },
+    {
+        "title": "Urgent",
+        "text": "Get groceries",
+        "note_id": "5876"
+    },
+    {
+        "title": "Remindert",
+        "text": "Finish homework",
+        "note_id": "7780"
     }
 ]
