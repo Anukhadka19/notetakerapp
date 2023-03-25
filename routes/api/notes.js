@@ -5,7 +5,7 @@ const uuid = require('../../helpers/uuid');
 
 // GET Route for retrieving all the notes
 notes.get('/api/notes', (req, res) => {
-fs.readFromFile('./db/notes.json').then((data) => res.json(JSON.parse(data)));
+fs.readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
 // POST Route for a new note
@@ -22,7 +22,7 @@ notes.post('/api/notes', (req, res) => {
       note_id: uuid(),
     };
    
-    readAndAppend(newNote, './db/notes.json');
+    readAndAppend(newNote, './db/db.json');
     res.json(`Note added successfully`);
   } else {
     res.error('Error in adding note');
