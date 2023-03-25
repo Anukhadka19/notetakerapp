@@ -22,7 +22,6 @@ notes.post('/api/notes', (req, res) => {
       note_id: uuid(),
     };
    
-
     readAndAppend(newNote, './db/notes.json');
     res.json(`Note added successfully`);
   } else {
